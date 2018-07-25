@@ -1,0 +1,29 @@
+.container {
+}
+
+.de-form {
+    padding-top: 20px;
+}
+#data,#page{
+    display: none;
+}
+
+#data {
+    max-width: 1200px;
+    overflow: auto;
+}
+
+.perpape>div{
+    float: left;
+    margin: 0 4px;
+    line-height: 38px;
+}
+
+.perpape>input{
+    float: left;
+    width: 50px;
+}
+
+.data-table {
+    width: 100%;
+}
