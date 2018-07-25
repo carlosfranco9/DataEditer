@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <title>首页</title>
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="/static/bootstrap-4.1.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/bootoast/bootoast.css">
+    <link rel="stylesheet" href="/static/css/animate.css"/>
+    <link rel="stylesheet" href="/static/css/index.css"/>
+</head>
+<body>
+<div class="container">
+    <form id="connect" class="de-form">
+        <div class="form-row">
+            <div class="col">
+                <input name="host" type="text" class="form-control" placeholder="HOST">
+            </div>
+            <div class="col">
+                <input name="dbname" type="text" class="form-control" placeholder="DBNAME">
+            </div>
+            <div class="col">
+                <input name="user" type="text" class="form-control" placeholder="USER">
+            </div>
+            <div class="col">
+                <input name="password" type="password" class="form-control" placeholder="PASSWORD">
+            </div>
+            <button id="connect-btn" type="button" class="btn btn-primary">连接</button>
+        </div>
+    </form>
+    <form id="select" class="de-form">
+        <div class="row">
+            <div class="form-group col">
+                <label for="filed">SELECT</label>
+                <input id="filed" name="filed" type="text" class="form-control" placeholder="*">
+            </div>
+            <div class="form-group col">
+                <label for="table">FROM</label>
+                <select name="table" id="table" class="form-control" required>
+                    <option value="">TABLE</option>
+                </select>
+            </div>
+            <div class="form-group col">
+                <label for="where">WHERE</label>
+                <input id="where" name="where" type="text" class="form-control" placeholder="1=1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <label for="groupby">GROUP BY</label>
+                <input id="groupby" name="groupby" type="text" class="form-control" placeholder="">
+            </div>
+            <div class="form-group col">
+                <label for="having">HAVING</label>
+                <input id="having" name="having" type="text" class="form-control" placeholder="">
+            </div>
+            <div class="form-group col">
+                <label for="orderby">ORDER BY</label>
+                <input id="orderby" name="orderby" type="text" class="form-control" placeholder="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <button id="select-btn" type="button" class="btn btn-primary">查询</button>
+            </div>
+        </div>
+    </form>
+
+    <div id="data">
+        <table class="data-table table table-striped">
+            <thead class="thead-light"></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <nav id="page" aria-label="Page navigation">
+        <ul class="pagination justify-content-end">
+        </ul>
+    </nav>
+</div>
+
+<script src="/static/js/jquery-3.3.1.min.js"></script>
+<script src="/static/bootstrap-4.1.2/js/bootstrap.min.js"></script>
+<script src="/static/bootoast/bootoast.js"></script>
+<script src="/static/js/index.js"></script>
+</body>
+</html>
